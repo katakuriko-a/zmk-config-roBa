@@ -70,6 +70,15 @@
 
             tap-ms = <20>;
         };
+        hold_scroll: behavior_key_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_SCROLL";
+            #binding-cells = "<2>";
+            tapping-term-ms = <200>; // 適宜調整
+            hold-trigger-key-positions = <&kp K>;
+            hold-bindings = <&mkp WHEEL_Y>;
+            tap-bindings = <&kp K>;
+        };
     };
 
     keymap {
